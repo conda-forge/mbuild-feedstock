@@ -1,5 +1,5 @@
 {% set name = "mbuild" %}
-{% set version = "0.10.5" %}
+{% set version = "0.10.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/mosdef-hub/mbuild/archive/{{ version }}.tar.gz
-  sha256: eb9878f550591a68d5404f5b173ad6343a236fbe9eca3331e53e8d8fc918e658
+  sha256: 5ca3520c9217ef8e98148cb03e8b4662f8660b286e70df5e894dfff84856957f
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -39,7 +39,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.rst
-  summary: 'A hierarchical, component based molecule builder.'
+  summary: A hierarchical, component based molecule builder.
 
   # The remaining entries in this section are optional, but recommended.
   description: |
