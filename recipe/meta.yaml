@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/mosdef-hub/mbuild/archive/{{ version }}.tar.gz
-  sha256: d412711ca9f587d32ccde6702f23513b352f2dd66d44863de2bec01615144776
+  sha256: 5ca3520c9217ef8e98148cb03e8b4662f8660b286e70df5e894dfff84856957f
 
 build:
   noarch: python
