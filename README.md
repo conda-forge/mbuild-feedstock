@@ -5,7 +5,7 @@ Home: https://github.com/mosdef-hub/mbuild
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A hierarchical, component based molecule builder.
 
