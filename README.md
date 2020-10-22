@@ -5,9 +5,13 @@ Home: https://github.com/mosdef-hub/mbuild
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mbuild-feedstock/blob/master/LICENSE.txt)
 
 Summary: A hierarchical, component based molecule builder.
+
+Development: https://github.com/mosdef-hub/mbuild
+
+Documentation: https://mbuild.mosdef.org/
 
 With just a few lines of mBuild code, you can assemble reusable components into
 complex molecular systems for molecular dynamics simulations. mBuild is
