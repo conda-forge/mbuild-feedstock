@@ -22,12 +22,13 @@ requirements:
   run:
     - mdtraj
     - numpy
-    - oset
     - scipy
-    - packmol
+    - packmol>=1!18.013
+    - oset
     - parmed
-    - protobuf
     - ele
+    - openbabel>=3.0.0
+    - protobuf
     - python >=3.6
 
 test:
