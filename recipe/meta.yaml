@@ -23,11 +23,11 @@ requirements:
     - mdtraj
     - numpy
     - scipy
-    - packmol>=1!18.013
+    - packmol >=1!18.013
     - oset
     - parmed
     - ele
-    - openbabel>=3.0.0
+    - openbabel >=3.0.0
     - protobuf
     - python >=3.6
 
