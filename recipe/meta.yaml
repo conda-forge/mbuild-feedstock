@@ -23,7 +23,7 @@ requirements:
     - mdtraj
     - numpy
     - scipy
-    - packmol >=1!18.013
+    - packmol
     - oset
     - parmed
     - ele
