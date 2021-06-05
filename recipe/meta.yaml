@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -24,10 +24,8 @@ requirements:
     - numpy
     - scipy
     - packmol
-    - oset
     - parmed >=3.4.0
     - ele
-    - openbabel >=3.0.0
     - protobuf
     - rdkit
     - python >=3.6
