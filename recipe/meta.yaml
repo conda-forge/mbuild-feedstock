@@ -1,5 +1,5 @@
 {% set name = "mbuild" %}
-{% set version = "0.10.9" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/mosdef-hub/mbuild/archive/{{ version }}.tar.gz
-  sha256: 22e1dd2d326bbecea7fa0d3046e618c0663c3d1cd730545e11d366cba6d30858
+  sha256: 5185c0a0ac03976a7cdb1937c129fcc3a51c404dc5fb59bf8a5e3c77eb6d9125
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -22,12 +22,14 @@ requirements:
   run:
     - mdtraj
     - numpy
-    - oset
     - scipy
     - packmol
-    - parmed
-    - protobuf
+    - oset
+    - parmed >=3.4.0
     - ele
+    - openbabel >=3.0.0
+    - protobuf
+    - rdkit
     - python >=3.6
 
 test:
