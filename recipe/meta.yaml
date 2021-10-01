@@ -1,5 +1,5 @@
 {% set name = "mbuild" %}
-{% set version = "0.13.0" %}
+{% set version = "0.13.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/mosdef-hub/mbuild/archive/{{ version }}.tar.gz
-  sha256: 332cd28846ebb769f4a85cdc1c6ed291413d66733b88130340916b4b0ceca82e
+  sha256: bb05191f29807adf91002f108fbc46723d297fc3ee33fe3d303bd8d56b74b81b
 
 build:
   noarch: python
