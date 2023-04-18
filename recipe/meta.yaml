@@ -21,6 +21,8 @@ requirements:
     - python >=3.7
   run:
     - mdtraj
+    - networkx
+    - treelib
     - numpy
     - scipy
     - packmol
