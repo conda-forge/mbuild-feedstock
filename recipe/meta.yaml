@@ -1,5 +1,5 @@
 {% set name = "mbuild" %}
-{% set version = "0.16.0" %}
+{% set version = "0.16.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/mosdef-hub/mbuild/archive/{{ version }}.tar.gz
-  sha256: 30245320450b85cff828f8e5137bba41d194fd675180753c97ca1f9b2f7333a3
+  sha256: 5811cc97372f7d782310896dd7a3d63de75e5b71a56b55d5f87bd4039989cb79
 
 build:
   noarch: python
@@ -21,6 +21,8 @@ requirements:
     - python >=3.7
   run:
     - mdtraj
+    - networkx
+    - treelib
     - numpy
     - scipy
     - packmol
