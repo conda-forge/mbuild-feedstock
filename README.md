@@ -156,9 +156,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bdice](https://github.com/bdice/)
 * [@daico007](https://github.com/daico007/)
-* [@justinGilmer](https://github.com/justinGilmer/)
-* [@rmatsum836](https://github.com/rmatsum836/)
+* [@CalCraven](https://github.com/CalCraven/)
 * [@umesh-timalsina](https://github.com/umesh-timalsina/)
 
