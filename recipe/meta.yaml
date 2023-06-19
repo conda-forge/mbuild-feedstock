@@ -30,7 +30,8 @@ requirements:
     - ele
     - protobuf
     - rdkit >=2021
-    - python >=3.7
+    - python >=3.8
+    - boltons
   run_constrained:
     - foyer >=0.11.0
 
