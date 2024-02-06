@@ -18,7 +18,7 @@ requirements:
   host:
     - pip
     - protobuf
-    - python >=3.8
+    - python >=3.8, <=3.11
   run:
     - mdtraj
     - networkx
@@ -30,7 +30,7 @@ requirements:
     - ele
     - protobuf
     - rdkit >=2021
-    - python >=3.8
+    - python >=3.8, <=3.11
     - boltons
     - importlib_resources
   run_constrained:
