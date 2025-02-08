@@ -19,6 +19,7 @@ requirements:
     - pip
     - protobuf
     - python {{ python_min }}
+    - setuptools
   run:
     - mdtraj
     - networkx
