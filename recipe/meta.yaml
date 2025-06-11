@@ -1,5 +1,5 @@
 {% set name = "mbuild" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/mosdef-hub/mbuild/archive/{{ version }}.tar.gz
-  sha256: 8e333def9b7ee8f2f54a663f8467ae03b3792cad4551d22013808c23dd34ff30
+  sha256: a6a73abec48856c7f3858d2fcccf03ba9fcb10b99862fb3947a762ec614cc3ec
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -26,14 +26,13 @@ requirements:
     - treelib
     - numpy <2.0
     - scipy
-    - packmol
+    - packmol >=20.15
     - parmed >=3.4.0
     - ele
     - gmso >=0.12.0
     - rdkit >=2021
     - python >={{ python_min }},<3.13a0
     - boltons
-    - importlib_resources
   run_constrained:
     - foyer >=0.11.0
 
