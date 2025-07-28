@@ -31,7 +31,7 @@ requirements:
     - ele
     - gmso >=0.12.0
     - rdkit >=2021
-    - python >={{ python_min }},<=3.13
+    - python >={{ python_min }},<3.13a0
     - boltons
   run_constrained:
     - foyer >=0.11.0
