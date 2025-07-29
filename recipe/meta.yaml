@@ -23,7 +23,7 @@ requirements:
     - mdtraj
     - networkx
     - treelib
-    - numpy >=2.0
+    - numpy >=2.0,<2.3
     - scipy
     - packmol >=20.15
     - parmed >=3.4.0
