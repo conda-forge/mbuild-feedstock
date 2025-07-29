@@ -17,7 +17,6 @@ build:
 requirements:
   host:
     - pip
-    - protobuf
     - python {{ python_min }}
     - setuptools
   run:
