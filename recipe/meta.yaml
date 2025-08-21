@@ -2,7 +2,7 @@
 {% set version = "1.2.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: mbuild-split
   version: {{ version }}
 
 source:
@@ -10,37 +10,59 @@ source:
   sha256: f13d9982391217494690930501447893114a2cb7815c186bced193192cd8dd7a
 
 build:
-  noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 1
 
-requirements:
-  host:
-    - pip
-    - python {{ python_min }}
-    - setuptools
-  run:
-    - mdtraj
-    - networkx
-    - treelib
-    - numpy >=2.0,<2.3
-    - scipy
-    - packmol >=20.15
-    - parmed >=3.4.0
-    - ele
-    - gmso >=0.12.0
-    - rdkit >=2021
-    - python >={{ python_min }},<=3.13
-    - boltons
-  run_constrained:
-    - foyer >=0.11.0
+outputs:
+  - name: mbuild-base
+    script: build_base.sh
+    build:
+      noarch: python
 
-test:
-  requires:
-    - python {{ python_min }}
-  imports:
-    - mbuild
+    requirements:
+      host:
+        - python {{ python_min }}
+        - pip
+        - setuptools
+      run:
+        - python >={{ python_min }},<=3.13
+        - mdtraj
+        - networkx
+        - treelib
+        - numpy >=2.0,<2.3
+        - scipy
+        - parmed >=3.4.0
+        - ele
+        - gmso >=0.12.0
+        - rdkit >=2021
+        - boltons
 
+      run_constrained:
+        - foyer >=0.11.0
+
+    test:
+      requires:
+        - python {{ python_min }}
+      imports:
+        - mbuild
+
+  - name: mbuild
+    build:
+      noarch: python
+
+    requirements:
+      host:
+        - python {{ python_min }}
+      run:
+        - python >={{ python_min }},<=3.13
+        - packmol >=20.15
+        - {{ pin_subpackage('mbuild-base', exact=True) }}
+
+
+    test:
+      requires:
+        - python {{ python_min }}
+      imports:
+        - mbuild
 about:
   home: https://github.com/mosdef-hub/mbuild
   license: MIT
