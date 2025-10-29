@@ -1,5 +1,5 @@
 {% set name = "mbuild" %}
-{% set version = "1.2.1" %}
+{% set version = "1.3.0" %}
 
 package:
   name: mbuild-split
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/mosdef-hub/mbuild/archive/{{ version }}.tar.gz
-  sha256: f13d9982391217494690930501447893114a2cb7815c186bced193192cd8dd7a
+  sha256: 9af591cc5221fb8545b27569181d2bdbf22aba258623d5c6b2c2c4c2e5c47e71
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: mbuild-base
