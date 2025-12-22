@@ -10,7 +10,7 @@ source:
   sha256: ce0324d7b80bca4c4d105ddbc74ed1cf3869e7c303218c9d3bdbe96abb83a105
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: mbuild-base
@@ -24,7 +24,7 @@ outputs:
         - pip
         - setuptools
       run:
-        - python >={{ python_min }},<=3.13
+        - python >={{ python_min }},<=3.14
         - mdtraj
         - networkx
         - treelib
@@ -53,7 +53,7 @@ outputs:
       host:
         - python {{ python_min }}
       run:
-        - python >={{ python_min }},<=3.13
+        - python >={{ python_min }},<=3.14
         - packmol >=20.15
         - py3dmol
         - {{ pin_subpackage('mbuild-base', exact=True) }}
