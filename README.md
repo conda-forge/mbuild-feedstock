@@ -165,6 +165,3 @@ Feedstock Maintainers
 * [@rmatsum836](https://github.com/rmatsum836/)
 * [@umesh-timalsina](https://github.com/umesh-timalsina/)
 
-
-<!-- dummy commit to enable rerendering -->
-
