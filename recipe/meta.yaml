@@ -1,5 +1,5 @@
 {% set name = "mbuild" %}
-{% set version = "1.3.1" %}
+{% set version = "1.4.0" %}
 
 package:
   name: mbuild-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/mosdef-hub/mbuild/archive/{{ version }}.tar.gz
-  sha256: ce0324d7b80bca4c4d105ddbc74ed1cf3869e7c303218c9d3bdbe96abb83a105
+  sha256: f3a473f0a2e44b5af114ff92680cf3babf4c841db0035eeb28d857c05b8d9142
 
 build:
   number: 0
@@ -24,20 +24,20 @@ outputs:
         - pip
         - setuptools
       run:
-        - python >={{ python_min }},<=3.13
+        - python >={{ python_min }},<=3.14
         - mdtraj
-        - networkx
+        - networkx >=2.5
         - treelib
-        - numpy >=2.0,<2.3
+        - numpy >=2.0,<2.6
         - scipy
         - parmed >=3.4.0
         - ele
-        - gmso >=0.12.0
+        - gmso >=0.16.2
         - rdkit >=2021  # worth considering putting it in full package only
         - boltons
 
       run_constrained:
-        - foyer >=0.11.0
+        - foyer >=1.0
 
     test:
       requires:
@@ -53,7 +53,7 @@ outputs:
       host:
         - python {{ python_min }}
       run:
-        - python >={{ python_min }},<=3.13
+        - python >={{ python_min }},<=3.14
         - packmol >=20.15
         - py3dmol
         - {{ pin_subpackage('mbuild-base', exact=True) }}
